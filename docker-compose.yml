@@ -1,0 +1,48 @@
+version: "3.9"
+services:
+  ml:
+    build: ./fastapi_app
+    restart: on-failure
+    ports:
+      - "8000:8000"
+    container_name: fastapi
+    environment:
+      PG_HOST: "postgres_db"
+      PG_DB_NAME: "assistant"
+      PG_USER: "SECRET_USER"
+      PG_PASSWORD: "SECRET_KEY"
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      EXTERNAL_HOST: "127.0.0.1:8000"
+    volumes:
+      - ./logs/fastapi/:/app/logs/
+      - ./indexes/:/app/indexes/
+      - ./fastapi_app/:/app/fastapi_app/ # mount the app folder to track changes
+    networks:
+      - mynetwork
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+
+  postgres_db:
+    image: "postgres:14"
+    restart: always
+    environment:
+      PORT: 5432
+      POSTGRES_DB: "assistant"
+      POSTGRES_USER: "SECRET_USER"
+      POSTGRES_PASSWORD: "SECRET_KEY"
+    container_name: postgres_db
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d
+      - ./pgdata:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+    healthcheck:
+        test: ["CMD", "pg_isready", "-q", "-d", "assistant", "-U", "SECRET_USER"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+
+networks:
+  mynetwork:
+    driver: bridge
