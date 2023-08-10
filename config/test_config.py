@@ -1,4 +1,0 @@
-TEST_PG_USER = "SECRET_USER"
-TEST_PG_PASSWORD = "SECRET_KEY"
-TEST_PG_DB_NAME = "pgdatabase"
-TEST_PG_HOST = "localhost"
