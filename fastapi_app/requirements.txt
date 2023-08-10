@@ -1,0 +1,40 @@
+# GENERAL
+tqdm
+numpy
+plotly
+configparser
+email-validator
+
+# FOR OPENAI
+openai
+langchain
+tiktoken
+requests
+faiss-cpu
+
+# FOR NLP
+pymystem3
+transformers == 4.29.2
+sentencepiece == 0.1.99
+torch
+sacremoses
+# nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl
+
+# FOR FASTAPI
+fastapi
+uvicorn
+python-multipart
+loguru
+asyncpg
+python-dotenv
+# jinja2
+
+# FOR PROMETHEUS
+prometheus_fastapi_instrumentator
+
+# OTHER
+# gif[plotly]
+# gif==3.0.0
+pandas
+pydantic
+json2table
