@@ -5,9 +5,7 @@
 
 # Описание проекта
 
-```markdown
-![product-screenshot1](https://github.com/JuliaLapova/Reserved/blob/main/landing.jpg?raw=true)
-```
+[![img][product-screenshot1]][demo-url]
 
 Умный корпоративный ассистент, который помогает быстро находить специализированную информацию по заранее определенным тематикам.
 
