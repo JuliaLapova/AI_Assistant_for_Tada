@@ -10,7 +10,8 @@ from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTex
 from fastapi_app.chatbot.prompt import prompt_template_summary, prompt_template_question, PROMPT_REGULAR
 from fastapi_app.chatbot.count_costs import num_tokens_from_messages
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = "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"
+#OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PROMPT_QUESTION = PromptTemplate(template=prompt_template_question, input_variables=["text"])
 PROMPT_SUMMARY = PromptTemplate(template=prompt_template_summary, input_variables=["text"])
 
