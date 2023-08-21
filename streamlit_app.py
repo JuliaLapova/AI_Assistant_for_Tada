@@ -1,4 +1,5 @@
 import streamlit as st
+from fastapi_app.chatbot.assistant import get_answer
 
 st.title('Привет, мир!')
 st.write('Это мой умный корпоративный ассистент.')
@@ -11,3 +12,5 @@ with st.form(key='my_form'):
 # Выводим данные, введенные пользователем
 if text_input:
     st.write(f'Вы ввели: {text_input}')
+    answer = get_answer(document = text_input)
+    st.write(f'Ваш ответ: {answer}')
