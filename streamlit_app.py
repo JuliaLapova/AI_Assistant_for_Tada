@@ -1,6 +1,8 @@
 import streamlit as st
 from fastapi_app.chatbot.assistant import get_answer
 
+openai_api_key = "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"
+
 st.title('Привет, мир!')
 st.write('Это мой умный корпоративный ассистент.')
 
