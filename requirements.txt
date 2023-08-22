@@ -4,3 +4,4 @@ langchain
 fastapi
 tiktoken
 loguru
+transformers
