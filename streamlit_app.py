@@ -12,22 +12,22 @@ def get_data_file(url):
         f.write(r.content)
     return localpath
 
-def main():
-    file_url = 'https://github.com/JuliaLapova/AI-Assistant/raw/main/faiss/faiss-hr/index.faiss'
+#def main():
+file_url = 'https://github.com/JuliaLapova/AI-Assistant/raw/main/faiss/faiss-hr/index.faiss'
 #    file_url = 'https://github.com/JuliaLapova/AI-Assistant/raw/main/faiss/faiss-hr/index.faiss'
-    localfile = get_data_file(file_url)
+localfile = get_data_file(file_url)
 
     # Дальше вы можете использовать localfile в вашем приложении, как если бы это был локальный файл
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
 
     # Выводим путь к файлу
-    st.write(f'localfile: {localfile}')
+st.write(f'localfile: {localfile}')
 
     # Проверяем наличие файла и выводим результат проверки
-    st.write(f'Проверяем наличие файла: {localfile}')    
-    st.write(os.path.exists(localfile))
+st.write(f'Проверяем наличие файла: {localfile}')    
+st.write(os.path.exists(localfile))
 
 
 st.title('Привет, мир!')
