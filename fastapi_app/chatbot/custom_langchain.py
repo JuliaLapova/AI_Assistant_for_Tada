@@ -7,9 +7,10 @@ from fastapi_app.chatbot.translation import translate_ru, translate_en
 
 BUSINESS_INDEX_PATH = "./faiss/faiss-b/"
 TK_INDEX_PATH = "./faiss/faiss-tk/"
-HR_INDEX_PATH = "./faiss/faiss-hr/"
+#HR_INDEX_PATH = "./faiss/faiss-hr/"
 YT_INDEX_PATH = "./faiss/faiss-yt/"
 
+HR_INDEX_PATH = "/tmp/tempfile/"
 
 #BUSINESS_INDEX_PATH = "./../../indexes/faiss-b/" if __name__ == "__main__" else "./indexes/faiss-b/"
 #TK_INDEX_PATH = "./../../indexes/faiss-tk/" if __name__ == "__main__" else "./indexes/faiss-tk/"
@@ -20,12 +21,21 @@ YT_INDEX_PATH = "./faiss/faiss-yt/"
 # print(__name__, __file__, BUSINESS_INDEX_PATH, TK_INDEX_PATH, HR_INDEX_PATH)
 
 
+#def get_faiss_index(faiss_index=None, api_key=None):
+#    index_path = TK_INDEX_PATH if faiss_index == 'tk' \
+#        else HR_INDEX_PATH if faiss_index == 'hr' \
+#        else YT_INDEX_PATH if faiss_index == 'yt' \
+#        else BUSINESS_INDEX_PATH
+#    return FAISS.load_local(folder_path=index_path, embeddings=OpenAIEmbeddings(openai_api_key=api_key))
+
+# get_faiss_index for Streamlit
 def get_faiss_index(faiss_index=None, api_key=None):
     index_path = TK_INDEX_PATH if faiss_index == 'tk' \
         else HR_INDEX_PATH if faiss_index == 'hr' \
         else YT_INDEX_PATH if faiss_index == 'yt' \
         else BUSINESS_INDEX_PATH
     return FAISS.load_local(folder_path=index_path, embeddings=OpenAIEmbeddings(openai_api_key=api_key))
+
 
 
 def get_merged_faiss_index(faiss_indexes='business+hr', api_key=None):
