@@ -5,3 +5,4 @@ fastapi
 tiktoken
 loguru
 transformers
+torch
