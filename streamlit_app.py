@@ -1,7 +1,7 @@
 import streamlit as st
 from fastapi_app.chatbot.assistant import get_answer
 from fastapi_app.routes.api_routes import get_answer_with_sources
-
+import os
 import requests
 
 @st.cache(allow_output_mutation=True)
