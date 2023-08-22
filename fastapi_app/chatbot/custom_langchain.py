@@ -5,10 +5,16 @@ from langchain.vectorstores.faiss import FAISS
 
 from fastapi_app.chatbot.translation import translate_ru, translate_en
 
-BUSINESS_INDEX_PATH = "./../../indexes/faiss-b/" if __name__ == "__main__" else "./indexes/faiss-b/"
-TK_INDEX_PATH = "./../../indexes/faiss-tk/" if __name__ == "__main__" else "./indexes/faiss-tk/"
-HR_INDEX_PATH = "./../../indexes/faiss-hr/" if __name__ == "__main__" else "./indexes/faiss-hr/"
-YT_INDEX_PATH = "./../../indexes/faiss-yt/" if __name__ == "__main__" else "./indexes/faiss-yt/"
+BUSINESS_INDEX_PATH = "./faiss/faiss-b/"
+TK_INDEX_PATH = "./faiss/faiss-tk/"
+HR_INDEX_PATH = "./faiss/faiss-hr/"
+YT_INDEX_PATH = "./faiss/faiss-yt/"
+
+
+#BUSINESS_INDEX_PATH = "./../../indexes/faiss-b/" if __name__ == "__main__" else "./indexes/faiss-b/"
+#TK_INDEX_PATH = "./../../indexes/faiss-tk/" if __name__ == "__main__" else "./indexes/faiss-tk/"
+#HR_INDEX_PATH = "./../../indexes/faiss-hr/" if __name__ == "__main__" else "./indexes/faiss-hr/"
+#YT_INDEX_PATH = "./../../indexes/faiss-yt/" if __name__ == "__main__" else "./indexes/faiss-yt/"
 
 
 # print(__name__, __file__, BUSINESS_INDEX_PATH, TK_INDEX_PATH, HR_INDEX_PATH)
