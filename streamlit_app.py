@@ -8,7 +8,8 @@ import requests
 @st.cache_data()  # Streamlit recommends to use this method
 #@st.cache_resource(allow_output_mutation=True)  # Streamlit recommends to use this method
 def get_data_file(url):
-    localpath = "/tmp/tempfile"
+#    localpath = "/tmp/tempfile"
+    localpath = "/tmp/index.faiss"
     r = requests.get(url)
     with open(localpath, 'wb') as f:
         f.write(r.content)
