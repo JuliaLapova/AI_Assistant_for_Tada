@@ -5,6 +5,7 @@ from fastapi_app.routes.api_routes import get_answer_with_sources
 import requests
 
 @st.cache(allow_output_mutation=True)
+#@st.cache_data(allow_output_mutation=True)  # Streamlit recommends to use this method
 def get_data_file(url):
     localpath = "/tmp/tempfile"
     r = requests.get(url)
