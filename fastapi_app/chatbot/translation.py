@@ -1,12 +1,21 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 # Модель для перевода с английского на русский
-enru_tokenizer = AutoTokenizer.from_pretrained("facebook/wmt19-en-ru")
-enru_model = AutoModelForSeq2SeqLM.from_pretrained("facebook/wmt19-en-ru")
+enru_tokenizer = AutoTokenizer.from_pretrained("t5-base")
+enru_model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
 
 # Модель для перевода с русского на английский
-ruen_tokenizer = AutoTokenizer.from_pretrained("facebook/wmt19-ru-en")
-ruen_model = AutoModelForSeq2SeqLM.from_pretrained("facebook/wmt19-ru-en")
+ruen_tokenizer = AutoTokenizer.from_pretrained("t5-base")
+ruen_model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
+
+
+## Модель для перевода с английского на русский
+#enru_tokenizer = AutoTokenizer.from_pretrained("facebook/wmt19-en-ru")
+#enru_model = AutoModelForSeq2SeqLM.from_pretrained("facebook/wmt19-en-ru")
+
+## Модель для перевода с русского на английский
+#ruen_tokenizer = AutoTokenizer.from_pretrained("facebook/wmt19-ru-en")
+#ruen_model = AutoModelForSeq2SeqLM.from_pretrained("facebook/wmt19-ru-en")
 
 ##enru_tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-ru")
 #enru_tokenizer = AutoTokenizer.from_pretrained("t5-base")
