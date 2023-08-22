@@ -26,7 +26,7 @@ if __name__ == "__main__":
     st.write(f'localfile: {localfile}')
 
     # Проверяем наличие файла и выводим результат проверки
-    st.write(f'Проверяем наличие файла: {localfile})    
+    st.write(f'Проверяем наличие файла: {localfile}')    
     st.write(os.path.exists(localfile))
 
 
