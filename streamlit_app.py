@@ -32,6 +32,14 @@ st.write(f'Проверяем наличие файла: {localfile}')
 st.write(os.path.exists(localfile))
 
 
+dir_path = '/tmp/'
+dir_contents = os.listdir(dir_path)
+
+st.write(dir_contents)
+
+
+
+
 st.title('Привет, мир!')
 st.write('Это мой умный корпоративный ассистент.')
 
