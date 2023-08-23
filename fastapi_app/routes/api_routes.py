@@ -8,14 +8,22 @@ from fastapi import Query, APIRouter, Body, Response
 from fastapi.responses import StreamingResponse
 from starlette import status
 
-from fastapi_app.utils.logger import setup_logging
-from fastapi_app.responses.api_responses import CHAT_RESPONSES, CHAT_RESPONSES_SIMPLE
-from fastapi_app.chatbot.assistant import get_answer_simple
-from fastapi_app.chatbot.custom_langchain import answer_with_openai, answer_with_openai_translated, \
+#from fastapi_app.utils.logger import setup_logging
+from utils.logger import setup_logging
+#from fastapi_app.responses.api_responses import CHAT_RESPONSES, CHAT_RESPONSES_SIMPLE
+from responses.api_responses import CHAT_RESPONSES, CHAT_RESPONSES_SIMPLE
+#from fastapi_app.chatbot.assistant import get_answer_simple
+from chatbot.assistant import get_answer_simple
+#from fastapi_app.chatbot.custom_langchain import answer_with_openai, answer_with_openai_translated, \
     format_answer_with_openai
-from fastapi_app.chatbot.second_chance import second_chance
-from fastapi_app.chatbot.update_sources import enrich_sources as enrich_sources_func
-from fastapi_app.chatbot.fake_keys.validate_key import use_key
+from chatbot.custom_langchain import answer_with_openai, answer_with_openai_translated, \
+    format_answer_with_openai
+#from fastapi_app.chatbot.second_chance import second_chance
+from chatbot.second_chance import second_chance
+#from fastapi_app.chatbot.update_sources import enrich_sources as enrich_sources_func
+from chatbot.update_sources import enrich_sources as enrich_sources_func
+#from fastapi_app.chatbot.fake_keys.validate_key import use_key
+from chatbot.fake_keys.validate_key import use_key
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "OPENAI_API_KEY")
 router = APIRouter()
