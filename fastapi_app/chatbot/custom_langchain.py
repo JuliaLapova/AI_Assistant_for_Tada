@@ -3,7 +3,8 @@ import re
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores.faiss import FAISS
 
-from fastapi_app.chatbot.translation import translate_ru, translate_en
+#from fastapi_app.chatbot.translation import translate_ru, translate_en
+from chatbot.translation import translate_ru, translate_en
 
 BUSINESS_INDEX_PATH = "./faiss/faiss-b/"
 TK_INDEX_PATH = "./faiss/faiss-tk/"
