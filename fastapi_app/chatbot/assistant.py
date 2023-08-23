@@ -7,8 +7,10 @@ from langchain.chains import AnalyzeDocumentChain
 from langchain.chains.question_answering import load_qa_chain
 from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
 
-from fastapi_app.chatbot.prompt import prompt_template_summary, prompt_template_question, PROMPT_REGULAR
-from fastapi_app.chatbot.count_costs import num_tokens_from_messages
+#from fastapi_app.chatbot.prompt import prompt_template_summary, prompt_template_question, PROMPT_REGULAR
+#from fastapi_app.chatbot.count_costs import num_tokens_from_messages
+from chatbot.prompt import prompt_template_summary, prompt_template_question, PROMPT_REGULAR
+from chatbot.count_costs import num_tokens_from_messages
 
 OPENAI_API_KEY = "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"
 #OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
