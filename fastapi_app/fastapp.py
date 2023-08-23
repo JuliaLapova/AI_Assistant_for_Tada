@@ -6,20 +6,33 @@ from starlette.exceptions import HTTPException
 from starlette.middleware.cors import CORSMiddleware
 from prometheus_fastapi_instrumentator import Instrumentator
 
-from fastapi_app.core.errors import http_error_handler
-from fastapi_app.core.errors import http422_error_handler
-from fastapi_app.core.examples import add_examples
-from fastapi_app.core.metadata import LOGO
-from fastapi_app.routes.api import router as api_router
-from fastapi_app.routes.index_routes import router as index_router
-from fastapi_app.routes.admin import router as admin_router
-from fastapi_app.routes.user import router as user_router
-from fastapi_app.core.config import get_app_settings
-from fastapi.openapi.utils import get_openapi
-from fastapi.staticfiles import StaticFiles
+#from fastapi_app.core.errors import http_error_handler
+from .core.errors import http_error_handler
+#from fastapi_app.core.errors import http422_error_handler
+from .core.errors import http422_error_handler
+#from fastapi_app.core.examples import add_examples
+from .core.examples import add_examples
+#from fastapi_app.core.metadata import LOGO
+from .core.metadata import LOGO
+#from fastapi_app.routes.api import router as api_router
+from .routes.api import router as api_router
+#from fastapi_app.routes.index_routes import router as index_router
+from .routes.index_routes import router as index_router
+#from fastapi_app.routes.admin import router as admin_router
+from .routes.admin import router as admin_router
+#from fastapi_app.routes.user import router as user_router
+from .routes.user import router as user_router
+#from fastapi_app.core.config import get_app_settings
+from .core.config import get_app_settings
+#from fastapi.openapi.utils import get_openapi
+from .openapi.utils import get_openapi
+#from fastapi.staticfiles import StaticFiles
+from .staticfiles import StaticFiles
 
-from fastapi_app.core.events import create_start_app_handler, create_stop_app_handler
-from fastapi_app.config.app_config import DEBUG
+#from fastapi_app.core.events import create_start_app_handler, create_stop_app_handler
+from .core.events import create_start_app_handler, create_stop_app_handler
+#from fastapi_app.config.app_config import DEBUG
+from .config.app_config import DEBUG
 
 
 def custom_openapi():
