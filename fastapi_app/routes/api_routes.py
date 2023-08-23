@@ -15,7 +15,7 @@ from responses.api_responses import CHAT_RESPONSES, CHAT_RESPONSES_SIMPLE
 #from fastapi_app.chatbot.assistant import get_answer_simple
 from chatbot.assistant import get_answer_simple
 #from fastapi_app.chatbot.custom_langchain import answer_with_openai, answer_with_openai_translated, \
-    format_answer_with_openai
+#    format_answer_with_openai
 from chatbot.custom_langchain import answer_with_openai, answer_with_openai_translated, \
     format_answer_with_openai
 #from fastapi_app.chatbot.second_chance import second_chance
