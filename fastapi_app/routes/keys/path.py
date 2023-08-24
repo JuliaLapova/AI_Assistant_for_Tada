@@ -3,6 +3,8 @@ from fastapi import Depends, APIRouter
 from loguru import logger
 from starlette import status
 
+from typing import List
+
 #from ...core.db import get_db
 from core.db import get_db
 from .schemas import Key, KeyCreate
@@ -12,8 +14,10 @@ router = APIRouter()
 
 
 @router.get("")
+#async def get_keys(db: asyncpg.Pool = Depends(get_db),
+#                   ) -> list[Key]:
 async def get_keys(db: asyncpg.Pool = Depends(get_db),
-                   ) -> list[Key]:
+                   ) -> List[Key]:
     # user_entries = get_entries_from_collection("users")
     logger.debug("endpoint /db_users/ called")
     logger.debug(f"{db=}")
