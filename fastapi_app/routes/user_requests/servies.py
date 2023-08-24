@@ -117,7 +117,8 @@ class UserRequestsService:
 
         return perent
 
-    async def get_many(self, db: asyncpg.Pool) -> list[UserRequest]:
+#    async def get_many(self, db: asyncpg.Pool) -> list[UserRequest]:
+    async def get_many(self, db: asyncpg.Pool) -> List[UserRequest]:
         query = select(self.model)
         logger.debug(query)
 
