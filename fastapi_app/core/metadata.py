@@ -64,11 +64,11 @@ TAGS_METADATA = [
         "description": "Healthcheck endpoint. Returns 200 if the service is up and running.",
     },
 ]
-CONTACT = {
-    "name": "AI ENGINEERS",
-    "url": f"http://{HOST}",
-    "email": "mary-ver@yandex.ru",
-}
+#CONTACT = {
+#    "name": "AI Leaders",
+#    "url": f"http://{HOST}",
+#    "email": "julialapova1983@gmail.com",
+#}
 LICENSE = {
     "name": "Apache 2.0",
     "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
