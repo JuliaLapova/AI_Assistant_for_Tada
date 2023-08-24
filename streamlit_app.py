@@ -4,39 +4,39 @@ from fastapi_app.routes.api_routes import get_answer_with_sources
 import os
 import requests
 
-#@st.cache(allow_output_mutation=True)
-@st.cache_data()  # Streamlit recommends to use this method
-#@st.cache_resource(allow_output_mutation=True)  # Streamlit recommends to use this method
-def get_data_file(url):
-#    localpath = "/tmp/tempfile"
-    localpath = "/tmp/index.faiss"
-    r = requests.get(url)
-    with open(localpath, 'wb') as f:
-        f.write(r.content)
-    return localpath
+##@st.cache(allow_output_mutation=True)
+#@st.cache_data()  # Streamlit recommends to use this method
+##@st.cache_resource(allow_output_mutation=True)  # Streamlit recommends to use this method
+#def get_data_file(url):
+##    localpath = "/tmp/tempfile"
+#    localpath = "/tmp/index.faiss"
+#    r = requests.get(url)
+#    with open(localpath, 'wb') as f:
+#        f.write(r.content)
+#    return localpath
 
-#def main():
-file_url = 'https://github.com/JuliaLapova/AI-Assistant/raw/main/faiss/faiss-hr/index.faiss'
-#    file_url = 'https://github.com/JuliaLapova/AI-Assistant/raw/main/faiss/faiss-hr/index.faiss'
-localfile = get_data_file(file_url)
+##def main():
+#file_url = 'https://github.com/JuliaLapova/AI-Assistant/raw/main/faiss/faiss-hr/index.faiss'
+##    file_url = 'https://github.com/JuliaLapova/AI-Assistant/raw/main/faiss/faiss-hr/index.faiss'
+#localfile = get_data_file(file_url)
 
-    # Дальше вы можете использовать localfile в вашем приложении, как если бы это был локальный файл
+#    # Дальше вы можете использовать localfile в вашем приложении, как если бы это был локальный файл
 
-#if __name__ == "__main__":
-#    main()
+##if __name__ == "__main__":
+##    main()
 
-    # Выводим путь к файлу
-st.write(f'localfile: {localfile}')
+#    # Выводим путь к файлу
+#st.write(f'localfile: {localfile}')
 
-    # Проверяем наличие файла и выводим результат проверки
-st.write(f'Проверяем наличие файла: {localfile}')    
-st.write(os.path.exists(localfile))
+#    # Проверяем наличие файла и выводим результат проверки
+#st.write(f'Проверяем наличие файла: {localfile}')    
+#st.write(os.path.exists(localfile))
 
 
-dir_path = '/tmp/'
-dir_contents = os.listdir(dir_path)
+#dir_path = '/tmp/'
+#dir_contents = os.listdir(dir_path)
 
-st.write(dir_contents)
+#st.write(dir_contents)
 
 
 
