@@ -13,7 +13,8 @@ from starlette import status
 #from fastapi_app.sql_tools import models
 from sql_tools import models
 from .schemas import KeyUpdate, KeyCreate, Key
-from ...sql_tools.models import engine
+#from ...sql_tools.models import engine
+from sql_tools.models import engine
 
 
 class KeyService:
