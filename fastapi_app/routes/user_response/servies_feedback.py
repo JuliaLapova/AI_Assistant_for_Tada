@@ -8,8 +8,10 @@ from sqlalchemy import select, insert, update
 from loguru import logger
 from starlette import status
 
-from fastapi_app.sql_tools import models
-from fastapi_app.sql_tools.models import engine
+#from fastapi_app.sql_tools import models
+#from fastapi_app.sql_tools.models import engine
+from sql_tools import models
+from sql_tools.models import engine
 from .schemas import FeedbackCreate, Feedback
 from .servies import user_response_servise
 
