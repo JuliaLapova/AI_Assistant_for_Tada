@@ -3,7 +3,8 @@ from typing import List, Optional, Union
 
 from pydantic import BaseModel
 
-from fastapi_app.routes.keys.schemas import Key
+#from fastapi_app.routes.keys.schemas import Key
+from routes.keys.schemas import Key
 
 
 class CompanyBase(BaseModel):
