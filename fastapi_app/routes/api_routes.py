@@ -13,7 +13,7 @@ from fastapi_app.utils.logger import setup_logging
 from fastapi_app.responses.api_responses import CHAT_RESPONSES, CHAT_RESPONSES_SIMPLE
 #from responses.api_responses import CHAT_RESPONSES, CHAT_RESPONSES_SIMPLE
 from fastapi_app.chatbot.assistant import get_answer_simple
-from chatbot.assistant import get_answer_simple
+#from chatbot.assistant import get_answer_simple
 from fastapi_app.chatbot.custom_langchain import answer_with_openai, answer_with_openai_translated, \
     format_answer_with_openai
 #from chatbot.custom_langchain import answer_with_openai, answer_with_openai_translated, \
