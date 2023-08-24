@@ -12,8 +12,8 @@ from starlette import status
 from sql_tools import models
 from .schemas import CompanyUpdate, CompanyCreate, Company
 from ..keys.schemas import Key
-from ...sql_tools.models import engine
-
+#from ...sql_tools.models import engine
+from sql_tools.models import engine
 
 class CompanyService:
     def __init__(self, model: models.Company):
