@@ -46,7 +46,7 @@ async def create_company(obj_in: CompanyCreate,
 @router.get("/{company_id}/api_keys")
 #async def get_company_keys(company_id: int,
 #                           db: asyncpg.Pool = Depends(get_db),
-                           ) -> list[Key]:
+#                           ) -> list[Key]:
 async def get_company_keys(company_id: int,
                            db: asyncpg.Pool = Depends(get_db),
                            ) -> List[Key]:
