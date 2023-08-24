@@ -2,7 +2,7 @@ import os
 
 from pydantic import Dict, Any #mine
 
-class AppSettings(BaseAppSettings):
+#class AppSettings(BaseAppSettings):
 #mine и вопрос тут
 HOST = os.getenv("EXTERNAL_HOST") or "localhost:8000"
 LOGO = "https://static.vecteezy.com/system/resources/thumbnails/005/381/497/small/cute-robot-illustration-with-happy-expression-free-vector.jpg"
