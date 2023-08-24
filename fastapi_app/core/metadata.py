@@ -1,5 +1,9 @@
 import os
 
+from pydantic import Dict, Any #mine
+
+class AppSettings(BaseAppSettings):
+#mine и вопрос тут
 HOST = os.getenv("EXTERNAL_HOST") or "localhost:8000"
 LOGO = "https://static.vecteezy.com/system/resources/thumbnails/005/381/497/small/cute-robot-illustration-with-happy-expression-free-vector.jpg"
 
@@ -64,6 +68,7 @@ TAGS_METADATA = [
         "description": "Healthcheck endpoint. Returns 200 if the service is up and running.",
     },
 ]
+CONTACT: Dict[str, Any] = {'name': 'AI ENGINEERS', 'url': 'http://localhost:8000', 'email': 'julialapova1983@gmail.com'}
 #CONTACT = {
 #    "name": "AI Leaders",
 #    "url": f"http://{HOST}",
