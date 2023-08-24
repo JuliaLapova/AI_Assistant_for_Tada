@@ -3,7 +3,7 @@ from typing import Union
 
 from fastapi import Query
 from pydantic import BaseModel
-from pydantic.fields import DeferredType
+#from pydantic.fields import DeferredType
 from typing import ForwardRef
 
 from fastapi_app.routes.keys.schemas import Key
