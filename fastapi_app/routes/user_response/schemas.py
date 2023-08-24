@@ -1,6 +1,8 @@
 from datetime import datetime
 from typing import Optional, Union
 
+from typing import List #mine
+
 from fastapi import Query
 from pydantic import BaseModel, conint
 
@@ -13,8 +15,8 @@ status_list = {"successful": "Ответ подготовлен",
 
 class UserResponseBase(BaseModel):
     raw_text: Union[str, None]
-    sources: Union[list[str], None]
-
+#    sources: Union[list[str], None]
+    sources: Union[List[str], None]
 
 class UserResponseCreate(UserResponseBase):
     request_id: int
