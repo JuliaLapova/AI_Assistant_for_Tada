@@ -25,9 +25,9 @@ from routes.user import router as user_router
 #from fastapi_app.core.config import get_app_settings
 from core.config import get_app_settings
 #from fastapi.openapi.utils import get_openapi
-from openapi.utils import get_openapi
+from fastapi.openapi.utils import get_openapi
 #from fastapi.staticfiles import StaticFiles
-from staticfiles import StaticFiles
+from fastapi.staticfiles import StaticFiles
 
 #from fastapi_app.core.events import create_start_app_handler, create_stop_app_handler
 from core.events import create_start_app_handler, create_stop_app_handler
