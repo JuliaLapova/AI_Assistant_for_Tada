@@ -1,6 +1,6 @@
 import os
 
-from pydantic_settings import Dict, Any #mine
+#from pydantic_settings import Dict, Any #mine
 
 #class AppSettings(BaseAppSettings):
 #mine и вопрос тут
