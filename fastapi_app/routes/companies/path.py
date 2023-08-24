@@ -4,7 +4,7 @@ from loguru import logger
 from starlette import status
 
 #from ...core.db import get_db
-from .core.db import get_db
+from core.db import get_db
 from .schemas import Company, CompanyCreate
 from .servies import company_servise
 from ..keys.schemas import Key
