@@ -41,7 +41,7 @@ class AppSettings(BaseAppSettings):
     # secret_key: SecretStr = pg_password
 
     #contact = CONTACT
-    contact = ""
+    #contact = ""
     license_info = LICENSE
     openapi_tags = TAGS_METADATA
 
@@ -69,7 +69,7 @@ class AppSettings(BaseAppSettings):
             "title": self.title,
             "version": self.version,
             "description": self.description,
-            "contact": self.contact,
+#            "contact": self.contact,
             "license_info": self.license_info,
             "openapi_tags": self.openapi_tags,
             "database_url": self.database_url,
