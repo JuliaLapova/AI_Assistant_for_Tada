@@ -105,7 +105,8 @@ def get_application() -> FastAPI:
     application.include_router(index_router)
     application.include_router(admin_router, prefix=settings.admin_prefix)
     application.include_router(user_router, prefix="/user")
-    application.mount("/static", StaticFiles(directory="./fastapi_app/static"), name="static")
+#        application.mount("/static", StaticFiles(directory="./fastapi_app/static"), name="static")
+    application.mount("/static", StaticFiles(directory="./static"), name="static")
 
     # application.openapi = custom_openapi
     application.swagger_ui_parameters = custom_ui_params({'showCommonExtensions': False,
