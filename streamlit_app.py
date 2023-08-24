@@ -57,7 +57,7 @@ with st.form(key='my_form'):
 
 user_input = text_input
 api_key = "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"
-topic = "yt"
+topic = "business" # yt
 translate_answer = False # передайте True, если вы хотите переводить ответ
 
 answer = get_answer_with_sources(user_input, api_key, topic, translate_answer)
