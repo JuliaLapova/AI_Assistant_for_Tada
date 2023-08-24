@@ -1,10 +1,15 @@
 from functools import lru_cache
 from typing import Dict, Type
 
-from fastapi_app.core.base import AppEnvTypes, BaseAppSettings
-from fastapi_app.core.app import AppSettings
-from fastapi_app.core.dev import DevAppSettings
-from fastapi_app.core.prod import ProdAppSettings
+
+#from fastapi_app.core.base import AppEnvTypes, BaseAppSettings
+#from fastapi_app.core.app import AppSettings
+#from fastapi_app.core.dev import DevAppSettings
+#from fastapi_app.core.prod import ProdAppSettings
+from core.base import AppEnvTypes, BaseAppSettings
+from core.app import AppSettings
+from core.dev import DevAppSettings
+from core.prod import ProdAppSettings
 
 environments: Dict[AppEnvTypes, Type[AppSettings]] = {
     AppEnvTypes.dev: DevAppSettings,
