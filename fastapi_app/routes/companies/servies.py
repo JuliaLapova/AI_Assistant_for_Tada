@@ -21,7 +21,8 @@ class CompanyService:
     def __init__(self, model: models.Company):
         self.model = model
 
-    async def get(self, db: asyncpg.Pool, _id: int) -> list[models.Company]:
+#    async def get(self, db: asyncpg.Pool, _id: int) -> list[models.Company]:
+    async def get(self, db: asyncpg.Pool, _id: int) -> List[models.Company]:
         query = select(self.model).where(self.model.id == _id)
         logger.debug(query)
 
