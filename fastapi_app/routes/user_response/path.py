@@ -6,6 +6,8 @@ from loguru import logger
 from starlette import status
 from starlette.background import BackgroundTasks
 
+from typing import List #mine
+
 from ..user_requests.schemas import UserRequestBase, UserRequestCreate, UserRequestOut
 from ..user_requests.servies import generate_clarify_response, user_requests_servise
 #from ...core.db import get_db
@@ -67,7 +69,8 @@ async def get_feedback(respons_id: int,
                        user_id: str = Header(None),
                        company: Company = Depends(get_current_active_company),
                        db: asyncpg.Pool = Depends(get_db),
-                       ) -> list[Feedback]:
+#                       ) -> list[Feedback]:
+                      ) -> List[Feedback]:
     """Получить оценки на ответ"""
     logger.info(f"[Request] {user_id=} сделал запрос от Компании: '{company.name}'")
 
