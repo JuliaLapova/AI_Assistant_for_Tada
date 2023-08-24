@@ -1,5 +1,5 @@
-from fastapi_app.core.app import AppSettings
-
+#from fastapi_app.core.app import AppSettings
+from core.app import AppSettings
 
 class ProdAppSettings(AppSettings):
     class Config(AppSettings.Config):
