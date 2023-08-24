@@ -74,7 +74,7 @@ TAGS_METADATA = [
 #    "url": f"http://{HOST}",
 #    "email": "julialapova1983@gmail.com",
 #}
-LICENSE = {
-    "name": "Apache 2.0",
-    "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
-}
+#LICENSE = {
+#    "name": "Apache 2.0",
+#    "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+#}
