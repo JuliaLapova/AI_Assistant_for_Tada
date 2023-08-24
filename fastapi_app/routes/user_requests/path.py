@@ -14,7 +14,8 @@ from core.db import get_db
 from .schemas import UserRequestOut, UserRequestCreate, UserRequestBase, UserRequestDialog, UserRequestUpdate
 from .servies import user_requests_servise as servise, generate_response
 from ..companies.schemas import Company
-from ...utils.auth import get_current_active_company
+#from ...utils.auth import get_current_active_company
+from utils.auth import get_current_active_company
 
 router = APIRouter()
 
