@@ -1,8 +1,8 @@
 import logging
 import sys
 from loguru import logger
-#from fastapi_app.core.logging import InterceptHandler
-from core.logging import InterceptHandler
+from fastapi_app.core.logging import InterceptHandler
+#from core.logging import InterceptHandler
 
 def setup_logging():
     logger.remove() # remove default handler from loguru
