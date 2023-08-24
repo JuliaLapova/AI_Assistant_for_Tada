@@ -3,7 +3,8 @@ from typing import Union
 
 from pydantic import BaseModel, validator
 
-from fastapi_app.routes.keys.schemas import Key
+#from fastapi_app.routes.keys.schemas import Key
+from routes.keys.schemas import Key
 
 
 class FilterBase(BaseModel):
