@@ -4,6 +4,8 @@ from loguru import logger
 from typing import Union
 from starlette import status
 
+from typing import List #mine
+
 #from ...core.db import get_db
 from core.db import get_db
 from .schemas import Filter, FilterCreate, FilterInCreate, FilterUpdate, FilterOut
@@ -21,7 +23,8 @@ async def get_filters(active_only: Union[bool, None] = False,
                       company: Company = Depends(get_current_active_company),
                       user_id: str = Header(None),
                       db: asyncpg.Pool = Depends(get_db),
-                      ) -> list[FilterOut]:
+#                      ) -> list[FilterOut]:
+                     ) -> List[FilterOut]:
     logger.info(f"[Filter] {user_id=} сделал запрос от Компании '{company.name}'")
     logger.debug(f"{db=}")
 
