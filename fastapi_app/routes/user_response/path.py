@@ -14,7 +14,8 @@ from .schemas import UserResponse, Feedback, FeedbackCreate, FeedbackIn
 from .servies import user_response_servise as servise
 from .servies_feedback import feedback_servise
 from ..companies.schemas import Company
-from ...utils.auth import get_current_active_company
+#from ...utils.auth import get_current_active_company
+from utils.auth import get_current_active_company
 
 router = APIRouter()
 
