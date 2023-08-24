@@ -1,7 +1,9 @@
 from fastapi import APIRouter
 
-from fastapi_app.routes.companies import path as companies
-from fastapi_app.routes.keys import path as keys
+#from fastapi_app.routes.companies import path as companies
+#from fastapi_app.routes.keys import path as keys
+from routes.companies import path as companies
+from routes.keys import path as keys
 
 router = APIRouter()
 
