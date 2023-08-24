@@ -1,8 +1,11 @@
 from fastapi import APIRouter
 
-from fastapi_app.routes.content_filter import path as content_filter
-from fastapi_app.routes.user_requests import path as user_requests
-from fastapi_app.routes.user_response import path as user_response
+#from fastapi_app.routes.content_filter import path as content_filter
+#from fastapi_app.routes.user_requests import path as user_requests
+#from fastapi_app.routes.user_response import path as user_response
+from routes.content_filter import path as content_filter
+from routes.user_requests import path as user_requests
+from routes.user_response import path as user_response
 
 router = APIRouter()
 
