@@ -5,10 +5,8 @@ from starlette import status
 
 #from ...core.db import get_db
 from core.db import get_db
-#from .schemas import Company, CompanyCreate
-from schemas import Company, CompanyCreate
-#from .servies import company_servise
-from servies import company_servise
+from .schemas import Company, CompanyCreate
+from .servies import company_servise
 #from ..keys.schemas import Key
 from keys.schemas import Key
 
