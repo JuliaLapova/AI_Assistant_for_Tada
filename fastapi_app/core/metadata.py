@@ -68,7 +68,7 @@ TAGS_METADATA = [
         "description": "Healthcheck endpoint. Returns 200 if the service is up and running.",
     },
 ]
-CONTACT: Dict[str, Any] = {'name': 'AI ENGINEERS', 'url': 'http://localhost:8000', 'email': 'julialapova1983@gmail.com'}
+#CONTACT: Dict[str, Any] = {'name': 'AI ENGINEERS', 'url': 'http://localhost:8000', 'email': 'julialapova1983@gmail.com'}
 #CONTACT = {
 #    "name": "AI Leaders",
 #    "url": f"http://{HOST}",
