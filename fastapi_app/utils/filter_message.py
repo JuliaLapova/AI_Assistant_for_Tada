@@ -2,7 +2,8 @@ import datetime
 
 from pymystem3 import Mystem
 
-from fastapi_app.routes.content_filter.schemas import Filter
+#from fastapi_app.routes.content_filter.schemas import Filter
+from routes.content_filter.schemas import Filter
 
 
 async def check_filters_mystem_lex(phrase_check, filter_lex):
