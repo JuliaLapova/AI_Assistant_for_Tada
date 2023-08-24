@@ -5,6 +5,8 @@ from sqlalchemy.dialects import postgresql
 
 import asyncpg
 
+from typing import List #mine
+
 from sqlalchemy import select, insert, text, delete
 
 from loguru import logger
@@ -29,7 +31,8 @@ class KeyService:
 
         return str(compiled_query)
 
-    async def get(self, db: asyncpg.Pool, _id: int) -> list[models.Company]:
+#    async def get(self, db: asyncpg.Pool, _id: int) -> list[models.Company]:
+    async def get(self, db: asyncpg.Pool, _id: int) -> List[models.Company]:
         query = select(self.model).where(self.model.id == _id)
 
         compiled_query = await self._compile(query)
@@ -45,8 +48,8 @@ class KeyService:
         logger.debug(f"{key}")
 
         return key
-
-    async def get_many(self, db: asyncpg.Pool) -> list[models.Keys]:
+#    async def get_many(self, db: asyncpg.Pool) -> list[models.Keys]:
+    async def get_many(self, db: asyncpg.Pool) -> List[models.Keys]:
         query = select(self.model)
         compile_query = await self._compile(query)
 
@@ -81,8 +84,8 @@ class KeyService:
             VALUES ({', '.join(placeholders)})
             RETURNING *
         """
-
-        values = list(key_data.dict().values())
+#        values = list(key_data.dict().values())
+        values = List(key_data.dict().values())
 
         logger.debug(f"{query=}")
         logger.debug(f"{values=}")
