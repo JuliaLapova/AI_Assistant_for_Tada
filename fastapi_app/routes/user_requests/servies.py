@@ -3,6 +3,8 @@ import os
 from asyncio import sleep
 from typing import Generic, TypeVar, Type
 
+from typing import List #mine
+
 import asyncpg
 from fastapi import HTTPException
 
@@ -71,14 +73,16 @@ class UserRequestsService:
         filter = await self._fetchrow(db, query)
         return filter
 
-    async def get_query_clarifys(self, db: asyncpg.Pool, _id: int) -> list[UserRequest]:
+#    async def get_query_clarifys(self, db: asyncpg.Pool, _id: int) -> list[UserRequest]:
+    async def get_query_clarifys(self, db: asyncpg.Pool, _id: int) -> List[UserRequest]:
         query = select(self.model).where(self.model.parent_id == _id)
 
         clarifys = await self._fetch(db, query)
 
         return clarifys
 
-    async def get_clarifys(self, db: asyncpg.Pool, _id: int) -> list[UserRequest]:
+#        async def get_clarifys(self, db: asyncpg.Pool, _id: int) -> list[UserRequest]:
+    async def get_clarifys(self, db: asyncpg.Pool, _id: int) -> List[UserRequest]:
         logger.warning(f"start get_clarifys")
 
         query = select(self.model).where(self.model.parent_id == _id)
