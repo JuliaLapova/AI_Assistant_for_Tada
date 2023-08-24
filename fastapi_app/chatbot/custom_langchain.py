@@ -8,11 +8,11 @@ from fastapi_app.chatbot.translation import translate_ru, translate_en
 
 BUSINESS_INDEX_PATH = "./faiss/faiss-b/"
 TK_INDEX_PATH = "./faiss/faiss-tk/"
-#HR_INDEX_PATH = "./faiss/faiss-hr/"
+HR_INDEX_PATH = "./faiss/faiss-hr/"
 YT_INDEX_PATH = "./faiss/faiss-yt/"
 
 #HR_INDEX_PATH = "/tmp/tempfile/"
-HR_INDEX_PATH = "/tmp/"
+#HR_INDEX_PATH = "/tmp/"
 
 #BUSINESS_INDEX_PATH = "./../../indexes/faiss-b/" if __name__ == "__main__" else "./indexes/faiss-b/"
 #TK_INDEX_PATH = "./../../indexes/faiss-tk/" if __name__ == "__main__" else "./indexes/faiss-tk/"
