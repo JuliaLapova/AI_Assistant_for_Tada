@@ -9,6 +9,7 @@ from .schemas import Company, CompanyCreate
 from .servies import company_servise
 from ..keys.schemas import Key
 
+from typing import List
 
 router = APIRouter()
 
@@ -16,8 +17,10 @@ router = APIRouter()
 
 
 @router.get("")
+#async def get_companies(db: asyncpg.Pool = Depends(get_db),
+#                        ) -> list[Company]:
 async def get_companies(db: asyncpg.Pool = Depends(get_db),
-                        ) -> list[Company]:
+                        ) -> List[Company]:
     # user_entries = get_entries_from_collection("users")
     logger.debug("endpoint /db_users/ called")
     logger.debug(f"{db=}")
@@ -41,9 +44,12 @@ async def create_company(obj_in: CompanyCreate,
 
 
 @router.get("/{company_id}/api_keys")
+#async def get_company_keys(company_id: int,
+#                           db: asyncpg.Pool = Depends(get_db),
+                           ) -> list[Key]:
 async def get_company_keys(company_id: int,
                            db: asyncpg.Pool = Depends(get_db),
-                           ) -> list[Key]:
+                           ) -> List[Key]:
     logger.debug("endpoint /get_company/ called")
     kyes = await company_servise.get_kyes(db, company_id)
 
