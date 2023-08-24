@@ -8,7 +8,8 @@ from starlette.background import BackgroundTasks
 
 from ..user_requests.schemas import UserRequestBase, UserRequestCreate, UserRequestOut
 from ..user_requests.servies import generate_clarify_response, user_requests_servise
-from ...core.db import get_db
+#from ...core.db import get_db
+from core.db import get_db
 from .schemas import UserResponse, Feedback, FeedbackCreate, FeedbackIn
 from .servies import user_response_servise as servise
 from .servies_feedback import feedback_servise
