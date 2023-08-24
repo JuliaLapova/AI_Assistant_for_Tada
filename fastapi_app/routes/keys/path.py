@@ -3,7 +3,8 @@ from fastapi import Depends, APIRouter
 from loguru import logger
 from starlette import status
 
-from ...core.db import get_db
+#from ...core.db import get_db
+from core.db import get_db
 from .schemas import Key, KeyCreate
 from .servies import key_servise as servise
 
