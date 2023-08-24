@@ -21,7 +21,8 @@ from ..user_response.schemas import UserResponseCreate
 from ..user_response.servies import user_response_servise
 #from ...sql_tools.models import engine
 from sql_tools.models import engine
-from ...utils.filter_message import filter_message
+#from ...utils.filter_message import filter_message
+from utils.filter_message import filter_message
 
 
 class UserRequestsService:
