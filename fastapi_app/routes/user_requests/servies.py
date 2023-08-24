@@ -11,7 +11,8 @@ from sqlalchemy import select, insert, delete, update
 from loguru import logger
 from starlette import status
 
-from fastapi_app.sql_tools import models
+#from fastapi_app.sql_tools import models
+from sql_tools import models
 from .schemas import UserRequest, UserRequestCreate, UserRequestUpdate, UserRequestDialog, UserResponseDialog
 from ..api_routes import calling_assistant
 from ..content_filter.schemas import Filter
