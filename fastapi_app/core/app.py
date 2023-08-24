@@ -13,7 +13,8 @@ from pydantic import PostgresDsn, SecretStr
 
 from core.logging import InterceptHandler
 from core.base import BaseAppSettings
-from core.metadata import DESCRIPTION, TAGS_METADATA, CONTACT, LICENSE
+#from core.metadata import DESCRIPTION, TAGS_METADATA, CONTACT, LICENSE
+from core.metadata import DESCRIPTION, TAGS_METADATA, LICENSE
 from config.test_config import TEST_PG_USER, TEST_PG_PASSWORD, TEST_PG_DB_NAME, TEST_PG_HOST
 
 pg_user = os.getenv("PG_USER") or TEST_PG_USER
@@ -39,7 +40,8 @@ class AppSettings(BaseAppSettings):
     min_connection_count: int = 10
     # secret_key: SecretStr = pg_password
 
-    contact = CONTACT
+    #contact = CONTACT
+    contact = ""
     license_info = LICENSE
     openapi_tags = TAGS_METADATA
 
