@@ -132,7 +132,8 @@ class UserRequestsService:
 
         return companies
 
-    async def get_many_by_company(self, db: asyncpg.Pool, company_id: int, active_only: bool = False) -> list[
+#        async def get_many_by_company(self, db: asyncpg.Pool, company_id: int, active_only: bool = False) -> list[
+    async def get_many_by_company(self, db: asyncpg.Pool, company_id: int, active_only: bool = False) -> List[
         UserRequest]:
         query = select(self.model).where(self.model.company_id == company_id)
 
