@@ -2,6 +2,8 @@ import datetime
 
 from pymystem3 import Mystem
 
+from typing import List #mine
+
 #from fastapi_app.routes.content_filter.schemas import Filter
 from routes.content_filter.schemas import Filter
 
@@ -23,8 +25,8 @@ async def check_filters_mystem_text(analysis, filter_text):
 
     return False
 
-
-async def filter_message(message: str, filter_rules: list[Filter]):
+#async def filter_message(message: str, filter_rules: list[Filter]):
+async def filter_message(message: str, filter_rules: List[Filter]):
     mystem = Mystem()
     analysis = mystem.analyze(message)
 
