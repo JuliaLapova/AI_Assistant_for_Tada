@@ -19,7 +19,8 @@ from ..content_filter.schemas import Filter
 from ..content_filter.servies import filter_servise
 from ..user_response.schemas import UserResponseCreate
 from ..user_response.servies import user_response_servise
-from ...sql_tools.models import engine
+#from ...sql_tools.models import engine
+from sql_tools.models import engine
 from ...utils.filter_message import filter_message
 
 
