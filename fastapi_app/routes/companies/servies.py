@@ -3,6 +3,8 @@ from typing import Generic, TypeVar, Type
 import asyncpg
 from fastapi import HTTPException
 
+from typing import List #mine
+
 from sqlalchemy import select, insert, delete
 
 from loguru import logger
@@ -41,7 +43,8 @@ class CompanyService:
 
         return company
 
-    async def get_many(self, db: asyncpg.Pool) -> list[models.Company]:
+    #async def get_many(self, db: asyncpg.Pool) -> list[models.Company]:
+    async def get_many(self, db: asyncpg.Pool) -> List[models.Company]:
         query = select(self.model)
         logger.debug(query)
 
