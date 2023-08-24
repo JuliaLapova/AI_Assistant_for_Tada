@@ -1,4 +1,5 @@
-from fastapi_app.chatbot.assistant import get_answer_simple
+#from fastapi_app.chatbot.assistant import get_answer_simple
+from chatbot.assistant import get_answer_simple
 
 NOT_OK_ANSWERS = ["нет информации",
                   "в данном контексте",
