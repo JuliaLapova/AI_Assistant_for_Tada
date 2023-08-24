@@ -4,6 +4,8 @@ from typing import Generic, TypeVar, Type
 import asyncpg
 from fastapi import HTTPException
 
+from typing import List #mine
+
 from sqlalchemy import select, insert, delete, update
 
 from loguru import logger
@@ -52,8 +54,9 @@ class FilterService:
 
         filter = await self._fetchrow(db, query)
         return filter
-
-    async def get_many(self, db: asyncpg.Pool) -> list[Filter]:
+        
+#    async def get_many(self, db: asyncpg.Pool) -> list[Filter]:
+    async def get_many(self, db: asyncpg.Pool) -> List[Filter]:
         query = select(self.model)
 
         async with db.acquire() as connection:
@@ -62,8 +65,9 @@ class FilterService:
         companies = [Filter(**r) for r in result]
 
         return companies
-
-    async def get_many_by_company(self, db: asyncpg.Pool, company_id: int, active_only: bool = False) -> list[Filter]:
+        
+#    async def get_many_by_company(self, db: asyncpg.Pool, company_id: int, active_only: bool = False) -> list[Filter]:
+    async def get_many_by_company(self, db: asyncpg.Pool, company_id: int, active_only: bool = False) -> List[Filter]:
         query = select(self.model).where(self.model.company_id == company_id)
 
         if active_only:
