@@ -14,7 +14,7 @@ from pydantic import PostgresDsn, SecretStr
 from core.logging import InterceptHandler
 from core.base import BaseAppSettings
 #from core.metadata import DESCRIPTION, TAGS_METADATA, CONTACT, LICENSE
-from core.metadata import DESCRIPTION, TAGS_METADATA, LICENSE
+from core.metadata import DESCRIPTION, TAGS_METADATA
 from config.test_config import TEST_PG_USER, TEST_PG_PASSWORD, TEST_PG_DB_NAME, TEST_PG_HOST
 
 pg_user = os.getenv("PG_USER") or TEST_PG_USER
@@ -42,7 +42,7 @@ class AppSettings(BaseAppSettings):
 
     #contact = CONTACT
     #contact = ""
-    license_info = LICENSE
+    #license_info = LICENSE
     openapi_tags = TAGS_METADATA
 
     api_prefix: str = "/api"
@@ -70,7 +70,7 @@ class AppSettings(BaseAppSettings):
             "version": self.version,
             "description": self.description,
 #            "contact": self.contact,
-            "license_info": self.license_info,
+#            "license_info": self.license_info,
             "openapi_tags": self.openapi_tags,
             "database_url": self.database_url,
 
