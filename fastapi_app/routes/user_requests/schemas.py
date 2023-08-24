@@ -6,8 +6,10 @@ from pydantic import BaseModel
 #from pydantic.fields import DeferredType
 from typing import ForwardRef
 
-from fastapi_app.routes.keys.schemas import Key
-from fastapi_app.routes.user_response.schemas import UserResponse
+#from fastapi_app.routes.keys.schemas import Key
+#from fastapi_app.routes.user_response.schemas import UserResponse
+from routes.keys.schemas import Key
+from routes.user_response.schemas import UserResponse
 
 example = "как начисляется ндфл сотруднику работающему из другой страны?"
 
