@@ -43,8 +43,8 @@ class AppSettings(BaseAppSettings):
     #contact = CONTACT
     #contact = ""
     #license_info = LICENSE
-    openapi_tags = TAGS_METADATA
-
+    #openapi_tags = TAGS_METADATA #mine вопрос
+ 
     api_prefix: str = "/api"
     admin_prefix: str = "/admin"
 
@@ -71,7 +71,7 @@ class AppSettings(BaseAppSettings):
             "description": self.description,
 #            "contact": self.contact,
 #            "license_info": self.license_info,
-            "openapi_tags": self.openapi_tags,
+#            "openapi_tags": self.openapi_tags,  #mine вопрос
             "database_url": self.database_url,
 
         }
