@@ -8,7 +8,8 @@ from sqlalchemy import select, insert, delete
 from loguru import logger
 from starlette import status
 
-from fastapi_app.sql_tools import models
+#from fastapi_app.sql_tools import models
+from sql_tools import models
 from .schemas import CompanyUpdate, CompanyCreate, Company
 from ..keys.schemas import Key
 from ...sql_tools.models import engine
