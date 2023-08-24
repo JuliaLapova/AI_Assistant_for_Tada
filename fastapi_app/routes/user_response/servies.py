@@ -11,8 +11,8 @@ from starlette import status
 #from fastapi_app.sql_tools import models
 from sql_tools import models
 from .schemas import UserResponse, UserResponseCreate, FeedbackCreate, Feedback
-from ...sql_tools.models import engine
-
+#from ...sql_tools.models import engine
+from sql_tools.models import engine
 
 class UserResponseService:
     def __init__(self, model: models.Responses):
