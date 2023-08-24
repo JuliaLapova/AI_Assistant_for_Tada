@@ -3,6 +3,8 @@ import datetime
 import asyncpg
 from fastapi import HTTPException
 
+from typing import List #mine
+
 from sqlalchemy import select, insert, update
 
 from loguru import logger
@@ -51,8 +53,8 @@ class FeedbackService:
 
         return obj
 
-
-    async def get_by_company(self, db: asyncpg.Pool, _id: int, company_id: int) -> list[Feedback]:
+#    async def get_by_company(self, db: asyncpg.Pool, _id: int, company_id: int) -> list[Feedback]:
+    async def get_by_company(self, db: asyncpg.Pool, _id: int, company_id: int) -> List[Feedback]:
         query = select(self.model).join(models.Responses, self.model.respons_id == models.Responses.id).join(models.Requests,
                                         models.Responses.request_id == models.Requests.id
                                         ).where(models.Responses.id == _id).where(models.Requests.company_id == company_id)
