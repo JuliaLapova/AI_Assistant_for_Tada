@@ -3,6 +3,8 @@ import datetime
 import asyncpg
 from fastapi import HTTPException
 
+from typing import List #mine
+
 from sqlalchemy import select, insert, update
 
 from loguru import logger
@@ -68,14 +70,15 @@ class UserResponseService:
 
         return filter
 
-    async def get_query_clarifys(self, db: asyncpg.Pool, _id: int) -> list[UserResponse]:
+#    async def get_query_clarifys(self, db: asyncpg.Pool, _id: int) -> list[UserResponse]:    
+    async def get_query_clarifys(self, db: asyncpg.Pool, _id: int) -> List[UserResponse]:
         query = select(self.model).where(self.model.parent_id == _id)
 
         clarifys = await self._fetch(db, query)
 
         return clarifys
-
-    async def get_clarifys(self, db: asyncpg.Pool, _id: int) -> list[UserResponse]:
+#    async def get_clarifys(self, db: asyncpg.Pool, _id: int) -> list[UserResponse]:
+    async def get_clarifys(self, db: asyncpg.Pool, _id: int) -> List[UserResponse]:
         logger.warning(f"start get_clarifys")
 
         query = select(self.model).where(self.model.parent_id == _id)
