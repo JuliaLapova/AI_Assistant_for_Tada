@@ -6,10 +6,15 @@ from typing import Any, Dict, List, Tuple
 from loguru import logger
 from pydantic import PostgresDsn, SecretStr
 
-from fastapi_app.core.logging import InterceptHandler
-from fastapi_app.core.base import BaseAppSettings
-from fastapi_app.core.metadata import DESCRIPTION, TAGS_METADATA, CONTACT, LICENSE
-from fastapi_app.config.test_config import TEST_PG_USER, TEST_PG_PASSWORD, TEST_PG_DB_NAME, TEST_PG_HOST
+#from fastapi_app.core.logging import InterceptHandler
+#from fastapi_app.core.base import BaseAppSettings
+#from fastapi_app.core.metadata import DESCRIPTION, TAGS_METADATA, CONTACT, LICENSE
+#from fastapi_app.config.test_config import TEST_PG_USER, TEST_PG_PASSWORD, TEST_PG_DB_NAME, TEST_PG_HOST
+
+from core.logging import InterceptHandler
+from core.base import BaseAppSettings
+from core.metadata import DESCRIPTION, TAGS_METADATA, CONTACT, LICENSE
+from config.test_config import TEST_PG_USER, TEST_PG_PASSWORD, TEST_PG_DB_NAME, TEST_PG_HOST
 
 pg_user = os.getenv("PG_USER") or TEST_PG_USER
 pg_password = os.getenv("PG_PASSWORD") or TEST_PG_PASSWORD
