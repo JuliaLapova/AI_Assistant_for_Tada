@@ -5,9 +5,12 @@ from fastapi import Depends, APIRouter, Header, BackgroundTasks
 from loguru import logger
 from starlette import status
 
+from typing import List #mine
+
 from ..user_response.schemas import UserResponse
 from ..user_response.servies import user_response_servise
-from ...core.db import get_db
+#from ...core.db import get_db
+from core.db import get_db
 from .schemas import UserRequestOut, UserRequestCreate, UserRequestBase, UserRequestDialog, UserRequestUpdate
 from .servies import user_requests_servise as servise, generate_response
 from ..companies.schemas import Company
@@ -20,7 +23,8 @@ router = APIRouter()
 async def get_filters(company: Company = Depends(get_current_active_company),
                       user_id: str = Header(None),
                       db: asyncpg.Pool = Depends(get_db),
-                      ) -> list[UserRequestOut]:
+#                      ) -> list[UserRequestOut]:
+                     ) -> List[UserRequestOut]:
     logger.info(f"[Filter] {user_id=} сделал запрос от Компании '{company.name}'")
     logger.debug(f"{db=}")
 
