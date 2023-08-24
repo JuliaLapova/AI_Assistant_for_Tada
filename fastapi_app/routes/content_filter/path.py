@@ -9,7 +9,7 @@ from core.db import get_db
 from .schemas import Filter, FilterCreate, FilterInCreate, FilterUpdate, FilterOut
 from .servies import filter_servise as servise
 #from ..companies.schemas import Company
-from companies.schemas import Company
+from routes.companies.schemas import Company
 #from ...utils.auth import get_current_active_company
 from utils.auth import get_current_active_company
 
