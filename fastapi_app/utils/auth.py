@@ -7,9 +7,12 @@ from fastapi.security import APIKeyHeader
 from loguru import logger
 from sqlalchemy import select
 
-from fastapi_app.core.db import get_db, _compile
-from fastapi_app.routes.companies.schemas import Company
-from fastapi_app.sql_tools import models
+#from fastapi_app.core.db import get_db, _compile
+#from fastapi_app.routes.companies.schemas import Company
+#from fastapi_app.sql_tools import models
+from core.db import get_db, _compile
+from routes.companies.schemas import Company
+from sql_tools import models
 
 api_key_header = APIKeyHeader(name='X-API-Key')
 
