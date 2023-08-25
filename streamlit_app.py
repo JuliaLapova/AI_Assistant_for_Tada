@@ -74,7 +74,7 @@ if text_input:  # Если text_input не пустой и не None
 #    
 
 if text_input:
-    st.write(f'Вы ввели: {text_input}')
+    st.write(f'Ваш вопрос: {text_input}')
     answer, sources = get_answer_with_sources(user_input=text_input, api_key=api_key, topic=topic, translate_answer=translate_answer)
-    st.write(f'Ваш ответ: {answer}')
-    st.write(f'Источники: {sources}')
+    st.write(f'Ответ: {answer}')
+    st.write(f'Наименование услуги: {sources}')
