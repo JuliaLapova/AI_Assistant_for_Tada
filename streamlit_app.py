@@ -55,13 +55,14 @@ with st.form(key='my_form'):
 #    answer = get_answer(document = text_input)
 #    st.write(f'Ваш ответ: {answer}')
 
-user_input = text_input
-api_key = "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"
-topic = "main" # yt
-translate_answer = False # передайте True, если вы хотите переводить ответ
-
-#answer, sources = get_answer_with_sources(user_input, api_key, topic, translate_answer)
-answer, sources = get_answer_with_sources(user_input, api_key, topic, translate_answer)
+# Исправляем здесь
+if text_input:  # Если text_input не пустой и не None
+  user_input = text_input
+  api_key = "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"
+  topic = "main" # yt
+  translate_answer = False # передайте True, если вы хотите переводить ответ
+  #answer, sources = get_answer_with_sources(user_input, api_key, topic, translate_answer)
+  answer, sources = get_answer_with_sources(user_input, api_key, topic, translate_answer)
 
 
 # Выводим данные, введенные пользователем
@@ -71,6 +72,7 @@ answer, sources = get_answer_with_sources(user_input, api_key, topic, translate_
 #    st.write(f'Ваш ответ: {answer}')
 #    st.write(f'Источники: {sources}')
 #    
+
 if text_input:
     st.write(f'Вы ввели: {text_input}')
     answer, sources = get_answer_with_sources(user_input=text_input, api_key=api_key, topic=topic, translate_answer=translate_answer)
