@@ -6,10 +6,11 @@ from langchain.vectorstores.faiss import FAISS
 from fastapi_app.chatbot.translation import translate_ru, translate_en
 #from chatbot.translation import translate_ru, translate_en
 
-BUSINESS_INDEX_PATH = "./faiss/faiss-b/"
+BUSINESS_INDEX_PATH = "./faiss/faiss-main/"
 TK_INDEX_PATH = "./faiss/faiss-tk/"
 HR_INDEX_PATH = "./faiss/faiss-hr/"
 YT_INDEX_PATH = "./faiss/faiss-yt/"
+MAIN_INDEX_PATH = "./faiss/faiss-main/"
 
 #HR_INDEX_PATH = "/tmp/tempfile/"
 #HR_INDEX_PATH = "/tmp/"
@@ -35,6 +36,7 @@ def get_faiss_index(faiss_index=None, api_key=None):
     index_path = TK_INDEX_PATH if faiss_index == 'tk' \
         else HR_INDEX_PATH if faiss_index == 'hr' \
         else YT_INDEX_PATH if faiss_index == 'yt' \
+        else MAIN_INDEX_PATH if faiss_index == 'main' \ #mine
         else BUSINESS_INDEX_PATH
     return FAISS.load_local(folder_path=index_path, embeddings=OpenAIEmbeddings(openai_api_key=api_key))
 
@@ -73,7 +75,7 @@ def get_embedding(text, model="text-embedding-ada-002", api_key=None):
     return openai.Embedding.create(input=[text], model=model)['data'][0]['embedding']
 
 
-def get_context(question, faiss_index='business', api_key=None, use_embedding=True):
+def get_context(question, faiss_index='main', api_key=None, use_embedding=True):
     if "+" in faiss_index:
         search_index = get_merged_faiss_index(faiss_index, api_key)
     else:
