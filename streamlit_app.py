@@ -74,3 +74,5 @@ answer, sources = get_answer_with_sources(user_input, api_key, topic, translate_
 if text_input:
     st.write(f'Вы ввели: {text_input}')
     answer, sources = get_answer_with_sources(user_input=text_input, api_key=api_key, topic=topic, translate_answer=translate_answer)
+    st.write(f'Ваш ответ: {answer}')
+    st.write(f'Источники: {sources}')
