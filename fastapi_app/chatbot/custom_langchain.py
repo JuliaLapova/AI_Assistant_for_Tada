@@ -10,7 +10,7 @@ BUSINESS_INDEX_PATH = "./faiss/faiss-main/"
 TK_INDEX_PATH = "./faiss/faiss-tk/"
 HR_INDEX_PATH = "./faiss/faiss-hr/"
 YT_INDEX_PATH = "./faiss/faiss-yt/"
-MAIN_INDEX_PATH = "./faiss/faiss-main/"
+#MAIN_INDEX_PATH = "./faiss/faiss-main/"
 MAIN_INDEX_PATH = "/faiss/faiss-main/"
 
 
