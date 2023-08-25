@@ -60,11 +60,17 @@ api_key = "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"
 topic = "main" # yt
 translate_answer = False # передайте True, если вы хотите переводить ответ
 
-answer = get_answer_with_sources(user_input, api_key, topic, translate_answer)
+#answer, sources = get_answer_with_sources(user_input, api_key, topic, translate_answer)
+answer, sources = get_answer_with_sources(user_input, api_key, topic, translate_answer)
+
 
 # Выводим данные, введенные пользователем
+#if text_input:
+#    st.write(f'Вы ввели: {text_input}')
+#    answer = get_answer_with_sources(document = text_input)
+#    st.write(f'Ваш ответ: {answer}')
+#    st.write(f'Источники: {sources}')
+#    
 if text_input:
     st.write(f'Вы ввели: {text_input}')
-    answer = get_answer_with_sources(document = text_input)
-    st.write(f'Ваш ответ: {answer}')
-    st.write(f'Источники: {sources}')
+    answer, sources = get_answer_with_sources(user_input=text_input, api_key=api_key, topic=topic, translate_answer=translate_answer)
