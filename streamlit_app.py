@@ -69,7 +69,7 @@ if text_input:  # Если text_input не пустой и не None
 #if text_input:
 #    st.write(f'Вы ввели: {text_input}')
 #    answer = get_answer_with_sources(document = text_input)
-#    st.write(f'Ваш ответ: {answer}')
+#    st.write(f'Ваш ответ:\n {answer}')
 #    st.write(f'Источники: {sources}')
 #    
 
