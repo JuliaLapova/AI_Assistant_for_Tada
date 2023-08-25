@@ -36,7 +36,7 @@ def get_faiss_index(faiss_index=None, api_key=None):
     index_path = TK_INDEX_PATH if faiss_index == 'tk' \
         else HR_INDEX_PATH if faiss_index == 'hr' \
         else YT_INDEX_PATH if faiss_index == 'yt' \
-        else MAIN_INDEX_PATH if faiss_index == 'main' \ #mine
+        else MAIN_INDEX_PATH if faiss_index == 'main' \
         else BUSINESS_INDEX_PATH
     return FAISS.load_local(folder_path=index_path, embeddings=OpenAIEmbeddings(openai_api_key=api_key))
 
