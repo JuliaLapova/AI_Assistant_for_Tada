@@ -41,7 +41,8 @@ import requests
 col1, col2 = st.columns(2)
 
 with col1:
-    st.title('Привет, я ваш умный помощник!')
+#    st.title('Привет, я ваш умный помощник!')
+    st.markdown("<h2>Привет, я ваш умный помощник!</h2>", unsafe_allow_html=True)
     st.write('Интеллектуальный консультант для сотрудников СПб ГКУ «МФЦ»')
 
 with col2:
