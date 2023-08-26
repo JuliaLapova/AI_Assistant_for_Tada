@@ -49,8 +49,8 @@ with col2:
     relative_path = 'images/logo.jpg'
     image_path = os.path.join(current_dir, relative_path)
 
-st.image(image_path)
-    st.image('sftp://root@31.129.97.70/root/ai-assistant/images/logo.jpg')
+#st.image(image_path)
+#    st.image('sftp://root@31.129.97.70/root/ai-assistant/images/logo.jpg')
     
 # Создаем форму для ввода данных пользователем
 with st.form(key='my_form'):
