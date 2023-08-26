@@ -41,8 +41,8 @@ import requests
 
 
 with col1:
-st.title('Привет, я ваш умный помощник!')
-st.write('Интеллектуальный консультант для сотрудников СПб ГКУ «МФЦ»')
+    st.title('Привет, я ваш умный помощник!')
+    st.write('Интеллектуальный консультант для сотрудников СПб ГКУ «МФЦ»')
 
 with col2:
     st.image('sftp://root@31.129.97.70/root/ai-assistant/images/logo.jpg')
