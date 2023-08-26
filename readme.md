@@ -70,7 +70,7 @@ PostgreSQL база данных, которая хранит:
 ## Веб-интерфейс пользователя
 
 Пример интерфейса пользователя:
-[![Product Name Screen Shot][product-screenshot4]][demo-url-front]
+
 
 <details>
   <summary>Примечание</summary>
