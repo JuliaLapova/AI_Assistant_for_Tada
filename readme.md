@@ -1,6 +1,6 @@
 [![License][license-shield]][license-url]
 [![Github][github-shield]][github-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 
 # Описание проекта
