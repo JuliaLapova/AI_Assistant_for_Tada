@@ -92,6 +92,7 @@ if text_input:
     st.write(f'Ваш вопрос: {text_input}')
     answer, sources = get_answer_with_sources(user_input=text_input, api_key=api_key, topic=topic, translate_answer=translate_answer)
     st.write(f'Ответ:\n {answer}')
+    st.markdown("---") # Это добавит горизонтальную линию
     st.write(f'Источник 1: {sources[0]}')
     st.write(f'Источник 2: {sources[1]}')
     st.write(f'Источник 3: {sources[2]}')
