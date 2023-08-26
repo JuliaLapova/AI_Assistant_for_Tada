@@ -40,15 +40,19 @@ import requests
 
 
 
-
+with col1:
 st.title('Привет, я ваш умный помощник!')
 st.write('Интеллектуальный консультант для сотрудников СПб ГКУ «МФЦ»')
 
+with col2:
+    st.image('sftp://root@31.129.97.70/root/ai-assistant/images/logo.jpg')
+    
 # Создаем форму для ввода данных пользователем
 with st.form(key='my_form'):
     text_input = st.text_input(label='Введите текст')
     submit_button = st.form_submit_button(label='Отправить')
-    
+
+
 # Выводим данные, введенные пользователем
 #if text_input:
 #    st.write(f'Вы ввели: {text_input}')
