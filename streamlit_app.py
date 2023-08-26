@@ -38,7 +38,7 @@ import requests
 
 #st.write(dir_contents)
 
-
+col1, col2 = st.columns(2)
 
 with col1:
     st.title('Привет, я ваш умный помощник!')
