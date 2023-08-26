@@ -46,9 +46,11 @@ with col1:
     st.write('Интеллектуальный консультант для сотрудников СПб ГКУ «МФЦ»')
 
 with col2:
-    current_dir = os.getcwd()
-    relative_path = '/images/logo.jpg'
-    image_path = os.path.join(current_dir, relative_path)
+#    https://drive.google.com/file/d/1g0KmrIILmwb0Vrxt-J-n0HFvQBDhk0Lr/view?usp=drive_link
+    st.image('https://drive.google.com/file/d/1g0KmrIILmwb0Vrxt-J-n0HFvQBDhk0Lr/view?usp=drive_link')
+#    current_dir = os.getcwd()
+#    relative_path = '/images/logo.jpg'
+#    image_path = os.path.join(current_dir, relative_path)
 
 #st.image(image_path)
 #    st.image('sftp://root@31.129.97.70/root/ai-assistant/images/logo.jpg')
