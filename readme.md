@@ -64,7 +64,6 @@ PostgreSQL база данных, которая хранит:
 
 * [![Python][python]][python-url]
 * [![Fastapi][Fastapi]][Fastapi-url]
-* [![PostgreSQL][PostgreSQL]][PostgreSQL-url]
 * [![Docker][Docker]][Docker-url]
 
 
