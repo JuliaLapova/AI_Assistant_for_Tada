@@ -47,7 +47,7 @@ with col1:
 
 with col2:
     st.markdown("""
-        <div style="padding-left:600px;">
+        <div style="padding-left:100px;">
             <img src="https://drive.google.com/uc?export=view&id=1g0KmrIILmwb0Vrxt-J-n0HFvQBDhk0Lr">
         </div>
         """, unsafe_allow_html=True)
