@@ -77,4 +77,6 @@ if text_input:
     st.write(f'Ваш вопрос: {text_input}')
     answer, sources = get_answer_with_sources(user_input=text_input, api_key=api_key, topic=topic, translate_answer=translate_answer)
     st.write(f'Ответ:\n {answer}')
-    st.write(f'Наименование услуги: {sources}')
+    st.write(f'Наименование услуги: {sources[0]}')
+    st.write(f'Наименование услуги: {sources[1]}')
+    st.write(f'Наименование услуги: {sources[2]}')
