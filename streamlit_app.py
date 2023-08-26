@@ -47,7 +47,7 @@ with col1:
 
 with col2:
 #    https://drive.google.com/file/d/1g0KmrIILmwb0Vrxt-J-n0HFvQBDhk0Lr/view?usp=drive_link
-st.image('https://drive.google.com/uc?export=view&id=1g0KmrIILmwb0Vrxt-J-n0HFvQBDhk0Lr')
+    st.image('https://drive.google.com/uc?export=view&id=1g0KmrIILmwb0Vrxt-J-n0HFvQBDhk0Lr')
 #    current_dir = os.getcwd()
 #    relative_path = '/images/logo.jpg'
 #    image_path = os.path.join(current_dir, relative_path)
