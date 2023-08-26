@@ -46,7 +46,7 @@ with col1:
 
 with col2:
     current_dir = os.getcwd()
-    relative_path = 'images/logo.jpg'
+    relative_path = '/images/logo.jpg'
     image_path = os.path.join(current_dir, relative_path)
 
 #st.image(image_path)
