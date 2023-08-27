@@ -73,7 +73,7 @@ with st.form(key='my_form'):
 # Исправляем здесь
 if text_input:  # Если text_input не пустой и не None
   user_input = text_input
-  api_key = "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"
+  api_key = "your_key"
   topic = "main" # yt
   translate_answer = False # передайте True, если вы хотите переводить ответ
   #answer, sources = get_answer_with_sources(user_input, api_key, topic, translate_answer)
