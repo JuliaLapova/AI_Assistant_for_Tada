@@ -4,6 +4,7 @@
 
 
 # Описание проекта
+![image](https://github.com/user-attachments/assets/0cc5abe3-5a14-46e4-8924-258bb0c745bb)
 
 
 
@@ -19,6 +20,7 @@
 * Управлять доступом к боту и базой знаний
 
 ## Структура проекта
+![image](https://github.com/user-attachments/assets/2a92279c-8396-4430-8372-2a7cf75335d8)
 
 
 Проект состоит из 3-х частей:
