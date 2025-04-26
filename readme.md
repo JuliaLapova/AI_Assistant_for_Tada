@@ -201,4 +201,16 @@ DEBUG=True
 [linkedin-url]: https://www.linkedin.com/in/maria-startseva/
 [demo-url-front]: https://cybermaryver-simple-front-for-chatbot-app-0tqyzf.streamlit.app/
 
+## Презентация
+
+![image](https://github.com/user-attachments/assets/2be7e3f5-de7c-4ee5-9eaa-8f18dd51e053)
+![image](https://github.com/user-attachments/assets/5d8c47dd-1a2b-4c08-80df-8e7aae2ae97a)
+![image](https://github.com/user-attachments/assets/134de769-8808-453b-97b7-8df8c6145ae3)
+![image](https://github.com/user-attachments/assets/1d4bef05-4826-4e1a-8a02-384f97dfd168)
+![image](https://github.com/user-attachments/assets/22d3c880-40b7-4e2c-b83c-dee787be29dc)
+
+
+
+
+
 
